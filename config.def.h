@@ -63,8 +63,10 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+/* commands defined by Prajwal */
 static const char *rangercmd[] = {"st", "-e" , "ranger", NULL};
 static const char *nmtuicmd[] = {"st", "-e", "nmtui", NULL};
+static const char *refreshbarcmd[] = {"refreshbar", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -103,6 +105,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
         { MODKEY,                       XK_r,      spawn,          {.v = rangercmd } },
         { MODKEY,                       XK_n,      spawn,          {.v = nmtuicmd } },
+        { MODKEY|ShiftMask,                       XK_b,      spawn,          {.v = refreshbarcmd } },
+
 };
 
 /* button definitions */
