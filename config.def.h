@@ -8,19 +8,16 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
-/* Colors defined by Prajwal */
-static const char col_red[]         = "#ff0000";
-static const char col_deepgray[]    = "#111111";
+static const char col_gray1[]       = "#222222"; /* background colour */
+static const char col_gray2[]       = "#444444"; /* inactive window border colour */
+static const char col_gray3[]       = "#bbbbbb"; /* font colour */
+static const char col_gray4[]       = "#000000"; /* current tag and current window title font colour */
+static const char col_cyan[]        = "#ffae00"; /* default top bar second colour(blue) and active window border colour */
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_deepgray },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_red},
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan },
 };
 
 /* tagging */
