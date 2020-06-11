@@ -12,8 +12,8 @@ static const char dmenufont[]       = "monospace:size=10";
 static const char normbgcol[]       = "#222222";
 static const char normbrdrcol[]     = "#111111";
 static const char normfgcol[]       = "#bbbbbb";
-static const char selfgcol[]        = "#111111";
-static const char selbgcol[]        = "#bd8a33"; /* bd8a33 */
+static const char selfgcol[]        = "#eeeeee";
+static const char selbgcol[]        = "#61538D"; 
 static const char selbrdrcol[]      = "#770000";
 
 static const char *colors[][3]      = {
