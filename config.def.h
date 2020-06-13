@@ -9,11 +9,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char normbgcol[]       = "#222222";
+static const char normbgcol[]       = "#111111";
 static const char normbrdrcol[]     = "#111111";
 static const char normfgcol[]       = "#bbbbbb";
 static const char selfgcol[]        = "#eeeeee";
-static const char selbgcol[]        = "#61538D"; 
+static const char selbgcol[]        = "#54487A";
 static const char selbrdrcol[]      = "#770000";
 
 static const char *colors[][3]      = {
