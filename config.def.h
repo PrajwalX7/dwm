@@ -14,7 +14,7 @@ static const char normbrdrcol[]     = "#111111";
 static const char normfgcol[]       = "#bbbbbb";
 static const char selfgcol[]        = "#eeeeee";
 static const char selbgcol[]        = "#54487A";
-static const char selbrdrcol[]      = "#770000";
+static const char selbrdrcol[]      = "#7866b0";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
