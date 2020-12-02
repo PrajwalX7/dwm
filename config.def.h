@@ -31,7 +31,6 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -64,9 +63,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 /* commands defined by Prajwal */
 static const char *poweroffcmd[] = {"sudo", "poweroff", NULL};
-static const char *rangercmd[] = {"st", "-e" , "ranger", NULL};
 static const char *nmtuicmd[] = {"st", "-e", "nmtui", NULL};
-static const char *refreshbarcmd[] = {"refreshbar", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -106,10 +103,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-        { MODKEY,                       XK_r,      spawn,          {.v = rangercmd } },
-        { MODKEY,                       XK_n,      spawn,          {.v = nmtuicmd } },
-        { MODKEY|ShiftMask,             XK_b,      spawn,          {.v = refreshbarcmd } },
-        { MODKEY|ShiftMask,             XK_x,      spawn,          {.v = poweroffcmd } },
+	{ MODKEY,                       XK_n,      spawn,          {.v = nmtuicmd } },
+	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = poweroffcmd } },
 };
 
 /* button definitions */
