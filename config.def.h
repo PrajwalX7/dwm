@@ -10,11 +10,11 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 static char normbgcol[]             = "#282828";
-static char normbrdrcol[]           = "#504945";
+static char normbrdrcol[]           = "#282828";
 static char normfgcol[]             = "#ebdbb2";
-static char selfgcol[]              = "#282828";
-static char selbrdrcol[]            = "#d79921";
-static char selbgcol[]              = "#d79921";
+static char selfgcol[]              = "#eeeeee";
+static char selbrdrcol[]            = "#61538D";
+static char selbgcol[]              = "#61538D";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -61,9 +61,11 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcol, "-nf", normfgcol, "-sb", selbgcol, "-sf", selfgcol, NULL };
 static const char *termcmd[]  = { "st", NULL };
-/* commands defined by Prajwal */
-static const char *poweroffcmd[] = {"sudo", "poweroff", NULL};
-static const char *nmtuicmd[] = {"st", "-e", "nmtui", NULL};
+
+/* My commands */
+static const char *lockcmd[] = {"i3lock", "-c", "61538D", NULL};
+static const char *roficmd[]= {"rofi", "-modi","drun","-show", "drun", NULL};
+static const char *pmixercmd[] = {"st", "-e", "pulsemixer", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -73,7 +75,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_p,      incnmaster,     {.i = -1 } },
+	{ MODKEY,                       XK_o,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
@@ -103,8 +105,11 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY,                       XK_n,      spawn,          {.v = nmtuicmd } },
-	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = poweroffcmd } },
+
+/* Custom Kebinds */
+	{ MODKEY,           			XK_p,      spawn,          {.v = roficmd } },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
+	{ MODKEY|ControlMask,           XK_p,      spawn,          {.v = pmixercmd } },
 };
 
 /* button definitions */
