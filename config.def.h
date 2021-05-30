@@ -66,6 +66,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *lockcmd[] = {"i3lock", "-c", "61538D", NULL};
 static const char *roficmd[]= {"rofi", "-modi","drun","-show", "drun", NULL};
 static const char *pmixercmd[] = {"st", "-e", "pulsemixer", NULL};
+static const char *pwroffcmd[] = {"systemctl", "poweroff", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -109,6 +110,7 @@ static Key keys[] = {
 /* Custom Kebinds */
 	{ MODKEY,           			XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = pwroffcmd } },
 	{ MODKEY|ControlMask,           XK_p,      spawn,          {.v = pmixercmd } },
 };
 
