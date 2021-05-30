@@ -110,7 +110,7 @@ static Key keys[] = {
 /* Custom Kebinds */
 	{ MODKEY,           			XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
-	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = pwroffcmd } },
+	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = pwroffcmd } },
 	{ MODKEY|ControlMask,           XK_p,      spawn,          {.v = pmixercmd } },
 };
 
